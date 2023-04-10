@@ -15,6 +15,11 @@ local UI = Atlas.new({
     Discord = "https://discord.gg/xu5dDS3Pb9"; -- works if UseLoader is set to true, will be copied to clipboard if player presses "Copy Invite" button
 })
 
+UI:Notify({
+    Title = "Message From the Developers";
+    Content = "Hello. We are Not responsible For your ban. And Some things Are In beta. So some things Might not work.";
+  })
+
 local MyPage = UI:CreatePage("Main")
 
 local MySection = MyPage:CreateSection("Reach") -- creates a section in page with the name passed. This argument is reqiured.
@@ -78,14 +83,13 @@ MySection:CreateInteractable({
     WarningIcon = 11109991278; -- optional: ImageAssetId for warning icon, will only be used if Warning is not nil, default is yellow warning icon.
 })
 
-local MySection = MyPage:CreateSection("BallTP") -- creates a section in page with the name passed. This argument is reqiured.
+local MySection = MyPage:CreateSection("Beta Features") -- creates a section in page with the name passed. This argument is reqiured.
 
 MySection:CreateButton({
-    Name = "TP to ball"; -- required: name of element
+    Name = "No ankles"; -- required: name of element
     Callback = function() -- required: function to be called when button is pressed
-        local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
-        rootPart.CFrame = game:GetService("Workspace").CSF.CFrame
+        game:GetService("Workspace").CSF.Ankle = false
     end
 })
 
---CSF
+

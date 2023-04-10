@@ -84,7 +84,7 @@ MySection:CreateButton({
     Name = "TP to ball"; -- required: name of element
     Callback = function() -- required: function to be called when button is pressed
         local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
-        rootPart.CFrame = game:GetService("Workspace").CSF
+        rootPart.CFrame = game:GetService("Workspace").CSF.CFrame
     end
 })
 

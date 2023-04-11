@@ -83,7 +83,7 @@ MySection:CreateInteractable({
     WarningIcon = 11109991278; -- optional: ImageAssetId for warning icon, will only be used if Warning is not nil, default is yellow warning icon.
 })
 
-local MySection = MyPage:CreateSection("Beta MPS 4 a side Features") -- creates a section in page with the name passed. This argument is reqiured.
+local MySection = MyPage:CreateSection("Beta Features (MPS 4 a side)") -- creates a section in page with the name passed. This argument is reqiured.
 
 MySection:CreateButton({
     Name = "No ankles"; -- required: name of element
@@ -92,4 +92,27 @@ MySection:CreateButton({
     end
 })
 
+local MySection = MyPage:CreateSection("MPS Match pitch Features") -- creates a section in page with the name passed. This argument is reqiured.
 
+MySection:CreateButton({
+    Name = "Destroy Ragdoll";
+    Callback = function()
+        game:GetService("Workspace").iamnotthegoat112.Ragdoll.Disabled = true
+ end
+})
+
+MySection:CreateButton({
+    Name = "Anticheat Disabler"
+    Callback = function()
+        game:GetService("Workspace").LocalScript.Disabled = true
+    end
+})
+
+MySection:CreateButton({
+    Name = "TP To VIP PItch"; -- required: name of element
+    Callback = function() -- required: function to be called when button is pressed
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(32182, -43.4978981, 425.75, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+    end
+})
+
+--

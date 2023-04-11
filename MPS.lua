@@ -83,7 +83,7 @@ MySection:CreateInteractable({
     WarningIcon = 11109991278; -- optional: ImageAssetId for warning icon, will only be used if Warning is not nil, default is yellow warning icon.
 })
 
-local MySection = MyPage:CreateSection("Beta Features") -- creates a section in page with the name passed. This argument is reqiured.
+local MySection = MyPage:CreateSection("Beta MPS 4 a side Features") -- creates a section in page with the name passed. This argument is reqiured.
 
 MySection:CreateButton({
     Name = "No ankles"; -- required: name of element
